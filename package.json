@@ -1,0 +1,20 @@
+{
+  "name": "jexl-port",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c && rollup -c rollup.config.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jexl": "^2.2.2",
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.1"
+  }
+}

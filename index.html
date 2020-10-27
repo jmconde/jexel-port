@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jexl Test</title>
+</head>
+<body>
+  <script src="./build/jexl.min.js"></script>
+  <script>
+    const jexl = new Jexl();
+    const context = {
+      name: { first: 'Sterling', last: 'Archer' },
+      assoc: [
+        { first: 'Lana', last: 'Kane' },
+        { first: 'Cyril', last: 'Figgis' },
+        { first: 'Pam', last: 'Poovey' }
+      ],
+      age: 36
+    }
+
+    // Filter an array asynchronously...
+    jexl.eval("assoc.first == 'Lana' && name.first == 'Sterling'", context).then(function (res) {
+      console.log(res) // Output: Kane
+    })
+  </script>
+</body>
+</html>
